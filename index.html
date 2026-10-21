@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BRASA 77 — Seu desejo. Nossa brasa.</title>
-<meta name="description" content="Hamburgueria artesanal em Goiânia. Sabores marcantes e burgers feitos na brasa.">
+<meta name="description" content="Hamburgueria artesanal em Aparecida de Goiânia. Sabores marcantes e burgers feitos na brasa.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;700&display=swap" rel="stylesheet">
@@ -209,7 +209,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
         <a href="#cardapio" class="btn btn-brasa">Ver cardápio →</a>
         <button class="btn btn-line" id="fazerPedido">Fazer pedido</button>
       </div>
-      <div class="local">Goiânia &nbsp;•&nbsp; Ter–Dom, 18h–23h</div>
+      <div class="local">Aparecida de Goiânia &nbsp;•&nbsp; Ter–Dom, 18h–23h</div>
     </div>
 
     <div class="hero-img">
@@ -297,9 +297,9 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
     <div>
       <h2>Vem pra brasa</h2>
       <div class="info">
-        <div><b>Endereço</b>Goiânia – GO</div>
+        <div><b>Endereço</b>Aparecida de Goiânia – GO</div>
         <div><b>Horário</b>Terça a domingo, das 18h às 23h</div>
-        <div><b>Instagram</b>@brasaburger7.7</div>
+        <div><b>Instagram</b>@brasa77</div>
       </div>
     </div>
     <div class="zap">
@@ -330,4 +330,106 @@ const MENU = [
   {id:1,cat:"Hambúrgueres",nome:"Triplo Burger",desc:"2 fatias de carne, 4 fatias de cheddar, 5 fatias de bacon, pão grelhado, alface e tomate.",preco:38.9,emoji:"🍔",tag:"Mais pedido"},
   {id:2,cat:"Hambúrgueres",nome:"Interestelar",desc:"Picanha, bacon, cheddar triplo, barbecue, molho verde, batata palha, costela desossada e lombo suíno.",preco:49.9,emoji:"🚀"},
   {id:3,cat:"Hambúrgueres",nome:"Booyah Burger",desc:"Pão grande, 2 carnes, cheddar, muçarela, 2 ovos fritos, bacon, calabresa, molho barbecue e presunto.",preco:39.9,emoji:"🍔"},
-  {id:4,cat:"Hambúrgueres",nome:"JL",desc:"Pão brioche selado na manteiga, molho verde, alface, duas carnes, cheddar, muçarela, presunto, bacon, pepperoni, dois anéis de cebola empanados, pickles e Last Sauce (molho especial da casa).
+  {id:4,cat:"Hambúrgueres",nome:"JL",desc:"Pão brioche selado na manteiga, molho verde, alface, duas carnes, cheddar, muçarela, presunto, bacon, pepperoni, dois anéis de cebola empanados, pickles e Last Sauce (molho especial da casa).",preco:42.9,emoji:"🍔"},
+  {id:5,cat:"Hambúrgueres",nome:"Potterhead",desc:"Hambúrguer artesanal, alface, tomate, salsicha, bacon crocante, batata e nosso molho mágico que derrete na boca.",preco:34.9,emoji:"⚡"},
+  {id:6,cat:"Hambúrgueres",nome:"Quarteto Queijos",desc:"Quatro queijos, cheddar, bacon, ovo, alface, tomate e duas carnes.",preco:44.99,emoji:"🧀"},
+  {id:7,cat:"Entradas",nome:"Esfirra + Cebola Empanada",desc:"Esfirra acompanhada de cebola empanada.",preco:24.99,emoji:"🥟"},
+  {id:8,cat:"Entradas",nome:"Batata Frita 500g",desc:"Batata frita com cheddar e bacon.",preco:24.99,emoji:"🍟"},
+  {id:9,cat:"Entradas",nome:"Porção de Picanha",desc:"Porção de picanha como entrada.",preco:35.0,emoji:"🥩"},
+  {id:10,cat:"Entradas",nome:"Bolinha de Costela",desc:"Bolinhas crocantes recheadas com costela.",preco:24.99,emoji:"🍖"},
+  {id:11,cat:"Entradas",nome:"10 Mini Pastéis",desc:"Dez mini pastéis crocantes.",preco:19.99,emoji:"🥠"},
+  {id:12,cat:"Drinks",nome:"Pink Brasa",desc:"Drink refrescante de morango com limão e água com gás, servido com gelo e calda de morango escorrendo pela borda, finalizado com morango e limão.",preco:12.99,emoji:"🍓"},
+  {id:13,cat:"Drinks",nome:"Purple Berry",desc:"Drink refrescante de uva e morango com gás, blueberries e gelo, com um toque de limão para equilibrar o sabor.",preco:13.99,emoji:"🫐"},
+  {id:14,cat:"Drinks",nome:"Jhen Peach",desc:"Drink refrescante de pêssego, morango e limão com água de coco e gelo. Leve, frutado e bem tropical.",preco:13.99,emoji:"🍑"},
+  {id:15,cat:"Drinks",nome:"Mar Profundo",desc:"Drink sem álcool de blueberry ou amora com água com gás, limão e gelo, criando um degradê natural do transparente ao azul-escuro. Visual bonito e refrescante.",preco:14.99,emoji:"🌊"},
+  {id:16,cat:"Drinks",nome:"Sunset Berry",desc:"Drink refrescante de morango e uva, com pedaços de morango, toque de laranja e água com gás opcional.",preco:13.99,emoji:"🍇"},
+  {id:17,cat:"Sobremesas",nome:"Explosão de Chocolate",desc:"Brownie quente, brigadeiro, calda de chocolate e sorvete de creme.",preco:14.9,emoji:"🍫"},
+  {id:18,cat:"Sobremesas",nome:"Tentação de Morango",desc:"Creme de morango, morangos frescos, chocolate e chantilly.",preco:15.9,emoji:"🍓"},
+  {id:19,cat:"Sobremesas",nome:"Pedaço do Céu",desc:"Bolo de chocolate, brigadeiro, morangos e sorvete de creme.",preco:14.9,emoji:"🍰"},
+  {id:20,cat:"Sobremesas",nome:"Doce Paixão",desc:"Mousse de maracujá, chocolate branco e calda de maracujá.",preco:13.9,emoji:"💛"},
+  {id:21,cat:"Cremes",nome:"Creme de Morango",desc:"Creme gelado sabor morango.",preco:null,emoji:"🍓"},
+  {id:22,cat:"Cremes",nome:"Creme de Café",desc:"Creme gelado sabor café.",preco:null,emoji:"☕"},
+  {id:23,cat:"Cremes",nome:"Creme de Chocolate",desc:"Creme gelado sabor chocolate.",preco:null,emoji:"🍫"},
+  {id:24,cat:"Cremes",nome:"Creme de Maracujá",desc:"Creme gelado sabor maracujá.",preco:null,emoji:"💛"},
+  {id:25,cat:"Refrigerantes",nome:"Magic Pop Redberry",desc:"Refrigerante Magic Pop sabor Redberry.",preco:8.99,emoji:"🥤"},
+  {id:26,cat:"Refrigerantes",nome:"Magic Pop Golden Fizz",desc:"Refrigerante Magic Pop sabor Golden Fizz.",preco:8.99,emoji:"🥤"},
+  {id:27,cat:"Refrigerantes",nome:"Magic Pop Lemon Crush",desc:"Refrigerante Magic Pop sabor Lemon Crush.",preco:8.99,emoji:"🥤"},
+  {id:28,cat:"Refrigerantes",nome:"Magic Pop Cola",desc:"Refrigerante Magic Pop sabor Cola.",preco:8.99,emoji:"🥤"},
+  {id:29,cat:"Refrigerantes",nome:"Magic Pop Lime Pop",desc:"Refrigerante Magic Pop sabor Lime Pop.",preco:8.99,emoji:"🥤"},
+  {id:30,cat:"Refrigerantes",nome:"Magic Pop Tropical Rush",desc:"Refrigerante Magic Pop sabor Tropical Rush.",preco:8.99,emoji:"🥤"},
+  {id:31,cat:"Refrigerantes",nome:"Magic Pop Orange Sparky",desc:"Refrigerante Magic Pop sabor Orange Sparky.",preco:8.99,emoji:"🥤"},
+  {id:32,cat:"Refrigerantes",nome:"Magic Pop Tropy Pop",desc:"Refrigerante Magic Pop sabor Tropy Pop.",preco:8.99,emoji:"🥤"},
+  {id:33,cat:"Energético",nome:"Brasa 77 Energy",desc:"Energético da casa, 473 ml.",preco:14.99,emoji:"⚡"}
+];
+/* ========================== */
+
+const R = v => "R$ " + v.toFixed(2).replace(".", ",");
+const $ = s => document.querySelector(s);
+const cart = {};
+let cat = "Todos";
+
+$("#ano").textContent = new Date().getFullYear();
+$("#faixa").innerHTML = ("<span>Feito na brasa</span><span>★</span><span>Seu desejo</span><span>★</span><span>Nossa brasa</span><span>★</span>").repeat(8);
+
+/* Menu */
+function renderAbas(){
+  const cats = ["Todos", ...new Set(MENU.map(i => i.cat))];
+  $("#abas").innerHTML = cats.map(c => `<button class="${c===cat?"on":""}" data-c="${c}">${c}</button>`).join("");
+}
+function renderGrade(){
+  $("#grade").innerHTML = MENU.filter(i => cat==="Todos" || i.cat===cat).map(i => `
+    <article class="item">
+      <div class="foto" aria-hidden="true">${i.emoji}</div>
+      <div class="corpo">
+        ${i.tag ? `<span class="badge">${i.tag}</span>` : ""}
+        <h3>${i.nome}</h3><p>${i.desc}</p>
+        <div class="rod">${i.preco==null ? `<span class="preco" style="font-size:1.1rem">Consulte o valor</span>` : `<span class="preco"><small>R$</small>${i.preco.toFixed(2).replace(".",",")}</span>
+        <button class="add" data-id="${i.id}">Adicionar</button>`}</div>
+      </div>
+    </article>`).join("");
+}
+$("#abas").addEventListener("click", e => { const b = e.target.closest("button"); if(!b) return; cat = b.dataset.c; renderAbas(); renderGrade(); });
+$("#grade").addEventListener("click", e => { const b = e.target.closest(".add"); if(!b) return; add(+b.dataset.id, 1); b.textContent = "Adicionado ✓"; setTimeout(() => b.textContent = "Adicionar", 900); });
+
+/* Carrinho */
+function add(id, n){
+  cart[id] = (cart[id] || 0) + n;
+  if(cart[id] <= 0) delete cart[id];
+  renderCarrinho();
+}
+function renderCarrinho(){
+  const ids = Object.keys(cart);
+  let total = 0, qtd = 0;
+  $("#lista").innerHTML = ids.length ? ids.map(id => {
+    const i = MENU.find(m => m.id == id), n = cart[id];
+    total += i.preco * n; qtd += n;
+    return `<div class="linha"><div><b>${i.nome}</b>${R(i.preco * n)}</div>
+      <div class="qtd"><button data-id="${id}" data-n="-1" aria-label="Remover um">−</button><span>${n}</span><button data-id="${id}" data-n="1" aria-label="Adicionar um">+</button></div></div>`;
+  }).join("") : `<p class="vazio">Seu pedido está vazio.<br>Escolha um burger no cardápio.</p>`;
+  $("#cont").textContent = qtd;
+  $("#total").textContent = R(total);
+  const txt = "Olá, Brasa 77! Quero fazer um pedido:%0A" +
+    ids.map(id => { const i = MENU.find(m => m.id == id); return `• ${cart[id]}x ${i.nome}`; }).join("%0A") +
+    `%0A%0ATotal: ${R(total)}`;
+  $("#enviar").href = ids.length ? `https://wa.me/${WHATSAPP}?text=${txt}` : "#";
+  $("#enviar").style.opacity = ids.length ? 1 : .4;
+}
+$("#lista").addEventListener("click", e => { const b = e.target.closest("button"); if(b) add(+b.dataset.id, +b.dataset.n); });
+const abrir = () => { $("#painel").classList.add("on"); $("#fundo").classList.add("on"); };
+const fechar = () => { $("#painel").classList.remove("on"); $("#fundo").classList.remove("on"); };
+["#abrirCarrinho","#fazerPedido","#pedirOferta"].forEach(s => $(s).addEventListener("click", abrir));
+$("#fechar").addEventListener("click", fechar); $("#fundo").addEventListener("click", fechar);
+document.addEventListener("keydown", e => e.key === "Escape" && fechar());
+$("#zapLink").href = `https://wa.me/${WHATSAPP}`;
+
+/* Menu mobile e link ativo */
+$("#burger").addEventListener("click", e => { const o = $("#menu").classList.toggle("on"); e.currentTarget.classList.toggle("open", o); e.currentTarget.setAttribute("aria-expanded", o); });
+document.querySelectorAll("nav a").forEach(a => a.addEventListener("click", () => { $("#menu").classList.remove("on"); $("#burger").classList.remove("open"); }));
+const links = [...document.querySelectorAll("nav a")];
+const obs = new IntersectionObserver(es => es.forEach(en => { if(en.isIntersecting){ links.forEach(l => l.classList.toggle("on", l.getAttribute("href") === "#" + en.target.id)); } }), {rootMargin:"-45% 0px -50% 0px"});
+document.querySelectorAll("main section").forEach(s => obs.observe(s));
+
+renderAbas(); renderGrade(); renderCarrinho();
+</script>
+</body>
+</html>
