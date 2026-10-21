@@ -2,255 +2,332 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Brasa 77 | Sabores que incendeiam</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BRASA 77 — Seu desejo. Nossa brasa.</title>
+<meta name="description" content="Hamburgueria artesanal em Goiânia. Sabores marcantes e burgers feitos na brasa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--red:#c91f2c;--dark:#211d1b;--cream:#fff8f0;--muted:#756c65}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:#fffdf9;color:var(--dark);font-family:Arial,sans-serif}
-header{background:white;padding:16px 5%;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;position:sticky;top:0;z-index:5;border-bottom:1px solid #eee}
-.logo{font-size:27px;font-weight:900;color:var(--red)}
-.logo span{color:var(--dark)}
-nav{display:flex;gap:15px;flex-wrap:wrap}
-nav a{color:var(--dark);text-decoration:none;font-weight:bold;font-size:14px}
-button,.btn{background:var(--red);color:white;border:0;border-radius:30px;padding:12px 17px;font-weight:bold;cursor:pointer;text-decoration:none;display:inline-block}
-.hero{padding:55px 7%;background:var(--cream);display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
-.hero h1{font-size:clamp(38px,6vw,68px);line-height:1;margin:12px 0}
-.hero h1 span{color:var(--red)}
-.hero p{color:var(--muted);line-height:1.7}
-.hero-art{background:linear-gradient(135deg,#f8c08b,#c91f2c);border-radius:25px;min-height:280px;display:grid;place-items:center;font-size:100px}
-section{padding:45px 6%}
-section:nth-of-type(even){background:var(--cream)}
-.kicker{color:var(--red);font-weight:bold;text-transform:uppercase;letter-spacing:2px;font-size:12px}
-h2{font-size:32px;margin:8px 0 24px}
-.categories{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.category{padding:20px;background:white;border:1px solid #eee;border-radius:15px;text-decoration:none;color:var(--dark);font-weight:bold}
-.category span{display:block;font-size:28px;margin-bottom:8px}
-.products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.product{background:white;border:1px solid #eee;border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
-.product-art{height:140px;background:#ffe5d2;display:grid;place-items:center;font-size:65px}
-.product-body{padding:15px;display:flex;flex-direction:column;flex:1}
-.product h3{margin:0 0 8px;font-size:18px}
-.product p{color:var(--muted);font-size:14px;line-height:1.5;flex:1}
-.price{color:var(--red);font-weight:900;font-size:19px;margin:8px 0 12px}
-.product button{width:100%}
-.challenge{background:var(--red);color:white;padding:30px;border-radius:20px}
-.challenge p{line-height:1.6}
-.promo{background:#fff0e5;border-radius:18px;padding:25px}
-footer{background:var(--dark);color:white;padding:30px 6%;line-height:1.7}
-footer p{color:#ddd}
-#cart{position:fixed;bottom:15px;right:15px;z-index:10;box-shadow:0 4px 18px #0003}
-#cart-panel{display:none;position:fixed;z-index:20;inset:0;background:#0008;align-items:flex-end;justify-content:center}
-#cart-panel.open{display:flex}
-.cart-box{background:white;width:100%;max-width:500px;max-height:85vh;overflow:auto;padding:24px;border-radius:20px 20px 0 0}
-.cart-row{padding:12px 0;border-bottom:1px solid #eee}
-.cart-row button{padding:5px 10px;margin:0 5px}
-@media(max-width:700px){
- .hero{grid-template-columns:1fr;padding:35px 6%}
- .hero-art{min-height:200px}
- .products{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
- .categories{grid-template-columns:repeat(2,minmax(0,1fr))}
- nav{gap:10px}
- nav a{font-size:12px}
- .product-art{height:110px}
- .product-body{padding:11px}
- .product h3{font-size:16px}
- .price{font-size:17px}
+:root{
+  --preto:#050505; --grafite:#121212; --cinza:#1d1d1d; --linha:#2a2a2a;
+  --branco:#f4f1ec; --texto:#b9b5af; --brasa:#e8392b; --brasa2:#ff5a3c;
+  --display:'Anton','Impact','Arial Narrow',sans-serif;
+  --corpo:'Archivo','Segoe UI',Arial,sans-serif;
 }
-@media(max-width:380px){.products{grid-template-columns:1fr}}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{background:var(--preto);color:var(--texto);font-family:var(--corpo);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+:focus-visible{outline:2px solid var(--brasa2);outline-offset:3px}
+.wrap{width:min(1180px,92%);margin:0 auto}
+h1,h2,h3{font-family:var(--display);font-weight:400;color:var(--branco);text-transform:uppercase;line-height:.95;letter-spacing:.01em}
+h2{font-size:clamp(2.4rem,6vw,4.4rem)}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.95rem 1.6rem;font-weight:700;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;transition:.25s}
+.btn-brasa{background:var(--brasa);color:#fff;clip-path:polygon(0 0,100% 0,100% 70%,94% 100%,0 100%)}
+.btn-brasa:hover{background:var(--brasa2);transform:translateY(-2px)}
+.btn-line{border:1.5px solid var(--branco);color:var(--branco)}
+.btn-line:hover{background:var(--branco);color:var(--preto)}
+
+/* NAV */
+header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(5,5,5,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--linha)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:var(--display);font-size:1.7rem;color:var(--branco);display:flex;align-items:center;gap:.45rem}
+.logo b{color:var(--brasa);font-weight:400}
+.logo svg{width:18px;height:22px}
+nav ul{display:flex;gap:1.8rem;list-style:none}
+nav a{font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--texto);padding:.4rem 0;position:relative;transition:.2s}
+nav a:hover,nav a.on{color:var(--branco)}
+nav a.on::after{content:"";position:absolute;left:0;bottom:-2px;width:100%;height:2px;background:var(--brasa)}
+.carrinho{display:flex;align-items:center;gap:.5rem;font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--branco)}
+.carrinho span{background:var(--brasa);color:#fff;min-width:22px;height:22px;border-radius:11px;display:grid;place-items:center;font-size:.72rem;letter-spacing:0}
+.burger-btn{display:none;width:40px;height:40px;position:relative}
+.burger-btn i{position:absolute;left:9px;right:9px;height:2px;background:var(--branco);transition:.25s}
+.burger-btn i:nth-child(1){top:14px}.burger-btn i:nth-child(2){top:20px}.burger-btn i:nth-child(3){top:26px}
+.burger-btn.open i:nth-child(1){top:20px;transform:rotate(45deg)}
+.burger-btn.open i:nth-child(2){opacity:0}
+.burger-btn.open i:nth-child(3){top:20px;transform:rotate(-45deg)}
+
+/* HERO */
+.hero{min-height:100svh;padding:110px 0 70px;display:flex;align-items:center;position:relative;overflow:hidden;
+  background:radial-gradient(70% 60% at 78% 55%,rgba(232,57,43,.28),transparent 70%),var(--preto)}
+.hero::before{content:"77";position:absolute;right:-3%;bottom:-14%;font-family:var(--display);font-size:clamp(18rem,40vw,36rem);line-height:1;color:transparent;-webkit-text-stroke:2px rgba(232,57,43,.22);pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center;position:relative}
+.tag{display:inline-flex;align-items:center;gap:.6rem;font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--texto);margin-bottom:1.2rem}
+.tag::before{content:"";width:8px;height:8px;background:var(--brasa);transform:rotate(45deg)}
+.hero h1{font-size:clamp(5rem,15vw,11rem);letter-spacing:-.01em}
+.hero h1 em{font-style:normal;color:var(--brasa);display:inline-block}
+.hero h2.sub{font-size:clamp(1.6rem,3.4vw,2.5rem);margin:1.4rem 0 1rem;line-height:1}
+.hero h2.sub span{color:var(--brasa);display:block}
+.hero p.lead{max-width:440px;font-size:1.05rem;margin-bottom:2rem}
+.ctas{display:flex;gap:.9rem;flex-wrap:wrap;margin-bottom:1.8rem}
+.local{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;display:flex;gap:.6rem;align-items:center}
+.local::before{content:"";width:7px;height:7px;background:var(--brasa);border-radius:50%;animation:pulso 1.8s infinite}
+@keyframes pulso{0%{box-shadow:0 0 0 0 rgba(232,57,43,.7)}100%{box-shadow:0 0 0 12px rgba(232,57,43,0)}}
+.hero-img{position:relative;aspect-ratio:4/5;max-width:480px;justify-self:center;width:100%;
+  background:linear-gradient(160deg,#2a2a2a,#0d0d0d);border:1px solid var(--linha);display:grid;place-items:center;transform:rotate(2deg)}
+.hero-img svg{width:86%;filter:drop-shadow(0 30px 40px rgba(0,0,0,.7));animation:flutua 5s ease-in-out infinite}
+@keyframes flutua{50%{transform:translateY(-12px)}}
+.selo{position:absolute;right:-14px;bottom:28px;background:var(--branco);color:var(--preto);padding:.7rem .9rem;font-family:var(--display);font-size:1.05rem;line-height:1;text-transform:uppercase;transform:rotate(-6deg)}
+.selo small{display:block;font-family:var(--corpo);font-size:.62rem;font-weight:700;letter-spacing:.1em;margin-bottom:.2rem}
+.selo b{color:var(--brasa);font-weight:400}
+
+/* FAIXA */
+.faixa{background:var(--brasa);color:#fff;overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:var(--display);font-size:1.4rem;letter-spacing:.05em;text-transform:uppercase}
+.faixa div{display:inline-block;animation:corre 28s linear infinite}
+.faixa span{margin:0 1.4rem}
+@keyframes corre{to{transform:translateX(-50%)}}
+
+section{padding:6rem 0}
+.cab{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:2.6rem}
+.cab p{max-width:360px}
+
+/* CARDÁPIO */
+.abas{display:flex;gap:.5rem;flex-wrap:wrap}
+.abas button{padding:.6rem 1.2rem;border:1px solid var(--linha);font-size:.76rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;transition:.2s}
+.abas button:hover{border-color:var(--brasa)}
+.abas button.on{background:var(--brasa);border-color:var(--brasa);color:#fff}
+.grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.2rem;margin-top:2rem}
+.item{background:var(--grafite);border:1px solid var(--linha);display:flex;flex-direction:column;transition:.25s}
+.item:hover{border-color:var(--brasa);transform:translateY(-4px)}
+.item .foto{height:150px;display:grid;place-items:center;background:radial-gradient(circle at 50% 70%,rgba(232,57,43,.3),transparent 70%),var(--cinza);font-size:3.6rem}
+.item .corpo{padding:1.3rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
+.item h3{font-size:1.7rem}
+.item p{font-size:.92rem;flex:1}
+.item .rod{display:flex;justify-content:space-between;align-items:center;margin-top:.8rem}
+.preco{font-family:var(--display);font-size:1.7rem;color:var(--branco)}
+.preco small{font-size:.9rem;color:var(--brasa);margin-right:.2rem}
+.add{background:var(--brasa);color:#fff;padding:.55rem 1rem;font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;transition:.2s}
+.add:hover{background:var(--brasa2)}
+.badge{align-self:flex-start;background:var(--branco);color:var(--preto);font-size:.64rem;font-weight:700;letter-spacing:.12em;padding:.15rem .5rem;text-transform:uppercase}
+
+/* SOBRE */
+.sobre{background:var(--grafite);border-block:1px solid var(--linha)}
+.sobre .wrap{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.sobre p+p{margin-top:1rem}
+.nums{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
+.nums div{border-left:3px solid var(--brasa);padding-left:.9rem}
+.nums b{display:block;font-family:var(--display);font-weight:400;font-size:2.6rem;color:var(--branco);line-height:1}
+.nums span{font-size:.82rem}
+.passos{display:grid;gap:1rem}
+.passos div{display:flex;gap:1.2rem;padding:1.3rem;background:var(--preto);border:1px solid var(--linha)}
+.passos i{font-style:normal;font-family:var(--display);font-size:2rem;color:var(--brasa);line-height:1}
+.passos h3{font-size:1.4rem;margin-bottom:.3rem}
+.passos p{font-size:.92rem}
+
+/* AVALIAÇÕES */
+.avals{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}
+.aval{padding:1.6rem;border:1px solid var(--linha);background:var(--grafite)}
+.aval .est{color:var(--brasa);letter-spacing:.2em;margin-bottom:.8rem}
+.aval p{color:var(--branco);margin-bottom:1rem}
+.aval span{font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+
+/* OFERTA */
+.oferta{background:linear-gradient(120deg,var(--brasa),#9d1d13);color:#fff;position:relative;overflow:hidden}
+.oferta .wrap{display:flex;justify-content:space-between;align-items:center;gap:2rem;flex-wrap:wrap}
+.oferta h2{color:#fff;font-size:clamp(2.6rem,7vw,5.4rem)}
+.oferta p{max-width:420px;margin-top:1rem;color:#ffe3dd}
+.oferta .btn{background:var(--preto);color:#fff}
+.oferta .btn:hover{background:#fff;color:var(--preto)}
+.cupom{display:inline-block;margin-top:1rem;border:2px dashed #fff;padding:.4rem .9rem;font-family:var(--display);font-size:1.4rem;letter-spacing:.1em}
+
+/* CONTATO */
+.contato .wrap{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.info{display:grid;gap:1.4rem;margin-top:2rem}
+.info div{border-left:3px solid var(--brasa);padding-left:1rem}
+.info b{display:block;color:var(--branco);font-size:.76rem;letter-spacing:.14em;text-transform:uppercase}
+.zap{display:flex;flex-direction:column;gap:1rem;padding:2rem;background:var(--grafite);border:1px solid var(--linha)}
+.zap h3{font-size:2rem}
+footer{border-top:1px solid var(--linha);padding:2rem 0;font-size:.82rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+
+/* CARRINHO */
+.painel{position:fixed;top:0;right:0;height:100%;width:min(400px,100%);background:var(--grafite);border-left:1px solid var(--linha);z-index:80;transform:translateX(100%);transition:.35s;display:flex;flex-direction:column;padding:1.5rem}
+.painel.on{transform:none}
+.painel header{all:unset;display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem}
+.painel h3{font-size:2rem}
+.lista{flex:1;overflow:auto;display:grid;gap:.8rem;align-content:start}
+.linha{display:flex;justify-content:space-between;align-items:center;gap:.8rem;padding:.8rem;background:var(--preto);border:1px solid var(--linha)}
+.linha b{color:var(--branco);display:block}
+.qtd{display:flex;align-items:center;gap:.5rem}
+.qtd button{width:28px;height:28px;border:1px solid var(--linha);color:var(--branco)}
+.qtd button:hover{border-color:var(--brasa)}
+.total{display:flex;justify-content:space-between;font-family:var(--display);font-size:1.8rem;color:var(--branco);margin:1rem 0}
+.vazio{text-align:center;padding:2rem 0}
+.fundo{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:70;opacity:0;pointer-events:none;transition:.3s}
+.fundo.on{opacity:1;pointer-events:auto}
+
+@media(max-width:900px){
+  .hero .wrap,.sobre .wrap,.contato .wrap{grid-template-columns:1fr}
+  .hero-img{max-width:340px;order:-1;margin-bottom:1rem}
+  .burger-btn{display:block}
+  nav{position:fixed;inset:68px 0 auto 0;background:var(--preto);border-bottom:1px solid var(--linha);transform:translateY(-130%);transition:.3s;z-index:-1}
+  nav.on{transform:none}
+  nav ul{flex-direction:column;gap:0;padding:1rem 4%}
+  nav a{display:block;padding:.9rem 0}
+  section{padding:4rem 0}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 
 <header>
-  <a class="logo" href="#inicio" style="text-decoration:none">BRASA <span>77</span></a>
-  <nav>
-    <a href="#cardapio">Cardápio</a>
-    <a href="#entradas">Entradas</a>
-    <a href="#hamburgueres">Hambúrgueres</a>
-    <a href="#bebidas">Bebidas</a>
-    <a href="#sobremesas">Sobremesas</a>
-  </nav>
+  <div class="wrap nav">
+    <a href="#inicio" class="logo" aria-label="Brasa 77">
+      <svg viewBox="0 0 18 22" aria-hidden="true"><path d="M9 0c1 5 7 8 7 14a7 7 0 0 1-14 0c0-3 2-5 3-7 .5 2 1.500 3 2.500 3C8 7 7 4 9 0z" fill="#e8392b"/></svg>
+      BRASA <b>77</b>
+    </a>
+    <nav id="menu" aria-label="Principal">
+      <ul>
+        <li><a href="#inicio" class="on">Início</a></li>
+        <li><a href="#cardapio">Cardápio</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#avaliacoes">Avaliações</a></li>
+        <li><a href="#oferta">Oferta</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <div style="display:flex;align-items:center;gap:.6rem">
+      <button class="carrinho" id="abrirCarrinho" aria-label="Abrir pedido">Pedidos <span id="cont">0</span></button>
+      <button class="burger-btn" id="burger" aria-label="Abrir menu" aria-expanded="false"><i></i><i></i><i></i></button>
+    </div>
+  </div>
 </header>
 
 <main>
+<!-- HERO -->
 <section class="hero" id="inicio">
-  <div>
-    <div class="kicker">Muito além do comum</div>
-    <h1>Sabores que <span>incendeiam.</span></h1>
-    <p>Bem-vindo à Brasa 77! Uma experiência feita para quem não se contenta com o básico. Cada detalhe, cada ingrediente e cada mordida têm identidade própria.</p>
-    <a class="btn" href="#cardapio">Explorar cardápio</a>
+  <div class="wrap">
+    <div>
+      <div class="tag">Hamburgueria artesanal</div>
+      <h1>BRASA <em>77</em></h1>
+      <h2 class="sub">Seu desejo.<span>Nossa brasa.</span></h2>
+      <p class="lead">Sabores marcantes, combinações sem limites e burgers feitos na brasa para quem não se contenta com o básico.</p>
+      <div class="ctas">
+        <a href="#cardapio" class="btn btn-brasa">Ver cardápio →</a>
+        <button class="btn btn-line" id="fazerPedido">Fazer pedido</button>
+      </div>
+      <div class="local">Goiânia &nbsp;•&nbsp; Ter–Dom, 18h–23h</div>
+    </div>
+
+    <div class="hero-img">
+      <svg viewBox="0 0 300 300" role="img" aria-label="Hambúrguer duplo com queijo e bacon">
+        <ellipse cx="150" cy="282" rx="105" ry="12" fill="#000" opacity=".5"/>
+        <path d="M45 125c0-55 45-90 105-90s105 35 105 90z" fill="#d9822b"/>
+        <path d="M60 110c10-45 50-65 90-65s80 20 90 65c-30-14-60-18-90-18s-60 4-90 18z" fill="#f0a24a" opacity=".55"/>
+        <g fill="#f8e6c4"><ellipse cx="100" cy="72" rx="7" ry="3.500" transform="rotate(-25 100 72)"/><ellipse cx="150" cy="58" rx="7" ry="3.500"/><ellipse cx="200" cy="72" rx="7" ry="3.500" transform="rotate(25 200 72)"/><ellipse cx="125" cy="92" rx="7" ry="3.500" transform="rotate(-10 125 92)"/><ellipse cx="178" cy="92" rx="7" ry="3.500" transform="rotate(10 178 92)"/></g>
+        <path d="M34 128c10-14 20 6 32-6s20 8 32-4 20 8 32-4 20 8 32-4 20 8 32-4 20 8 32-4 10-6 14 4v14H34z" fill="#5fb43a"/>
+        <rect x="42" y="140" width="216" height="14" rx="7" fill="#d62d26"/>
+        <path d="M48 154h204l-6 12H54z" fill="#8a2d5e"/>
+        <path d="M40 166h220v14c-30 4-35 22-55 12s-30 10-55 6-40 12-55 2-35-6-55 0z" fill="#e8a50c"/>
+        <rect x="44" y="176" width="212" height="26" rx="13" fill="#3a1a10"/>
+        <path d="M40 202h220v10c-25 8-40-6-60 4s-40-8-70 2-45-10-90-2z" fill="#f4b81a"/>
+        <rect x="44" y="212" width="212" height="26" rx="13" fill="#2e130b"/>
+        <path d="M48 238h204c0 20-20 32-102 32S48 258 48 238z" fill="#d9822b"/>
+      </svg>
+      <div class="selo"><small>Feito na</small>BRASA <b>77</b></div>
+    </div>
   </div>
-  <div class="hero-art" aria-label="Hambúrguer">🍔</div>
 </section>
 
+<div class="faixa" aria-hidden="true"><div id="faixa"></div></div>
+
+<!-- CARDÁPIO -->
 <section id="cardapio">
-  <div class="kicker">Escolha sua experiência</div>
-  <h2>Nosso cardápio</h2>
-  <div class="categories">
-    <a class="category" href="#entradas"><span>🍟</span>Entradas</a>
-    <a class="category" href="#hamburgueres"><span>🍔</span>Hambúrgueres</a>
-    <a class="category" href="#bebidas"><span>🥤</span>Bebidas</a>
-    <a class="category" href="#drinks"><span>🍓</span>Drinks sem álcool</a>
-    <a class="category" href="#sobremesas"><span>🍰</span>Sobremesas</a>
-    <a class="category" href="#cremes"><span>🍫</span>Cremes</a>
+  <div class="wrap">
+    <div class="cab">
+      <h2>Cardápio</h2>
+      <div class="abas" id="abas" role="tablist"></div>
+    </div>
+    <div class="grade" id="grade"></div>
   </div>
 </section>
 
-<section id="entradas">
-  <div class="kicker">Para começar</div>
-  <h2>Entradas</h2>
-  <div class="products" id="grid-entradas"></div>
-</section>
-
-<section id="hamburgueres">
-  <div class="kicker">O sabor da casa</div>
-  <h2>Hambúrgueres</h2>
-  <div class="products" id="grid-hamburgueres"></div>
-</section>
-
-<section id="bebidas">
-  <div class="kicker">Para acompanhar</div>
-  <h2>Bebidas</h2>
-  <div class="products" id="grid-bebidas"></div>
-</section>
-
-<section id="drinks">
-  <div class="kicker">Refrescantes e sem álcool</div>
-  <h2>Drinks especiais</h2>
-  <div class="products" id="grid-drinks"></div>
-</section>
-
-<section id="sobremesas">
-  <div class="kicker">Um final perfeito</div>
-  <h2>Sobremesas</h2>
-  <div class="products" id="grid-sobremesas"></div>
-</section>
-
-<section id="cremes">
-  <div class="kicker">Cremosos e irresistíveis</div>
-  <h2>Nossos cremes</h2>
-  <div class="products" id="grid-cremes"></div>
-</section>
-
-<section>
-  <div class="challenge">
-    <div class="kicker" style="color:#ffe0bf">Desafio Brasa 77</div>
-    <h2>Você encara o Interestelar?</h2>
-    <p>Um hambúrguer gigante para quem tem fome de aventura. Será que você consegue encarar esse desafio em 5 minutos? Consulte as regras e condições antes de participar.</p>
+<!-- SOBRE -->
+<section class="sobre" id="sobre">
+  <div class="wrap">
+    <div>
+      <div class="tag">Nossa história</div>
+      <h2>Feito na brasa.<br>Sem pressa.</h2>
+      <p style="margin-top:1.4rem">A Brasa 77 nasceu da vontade de fazer um hambúrguer que as pessoas lembrem no dia seguinte. Blend próprio, pão macio e molhos feitos na casa.</p>
+      <p>Cada burger é montado na hora, do jeito que deve ser: suculento, quente e generoso.</p>
+      <div class="nums">
+        <div><b>100%</b><span>carne selecionada</span></div>
+        <div><b>77</b><span>sabor em cada mordida</span></div>
+        <div><b>6</b><span>dias de brasa por semana</span></div>
+      </div>
+    </div>
+    <div class="passos">
+      <div><i>1</i><div><h3>Blend artesanal</h3><p>Cortes selecionados, moídos todos os dias.</p></div></div>
+      <div><i>2</i><div><h3>Grelhado na brasa</h3><p>Fogo forte para selar o suco e dar defumado.</p></div></div>
+      <div><i>3</i><div><h3>Montado na hora</h3><p>Ingredientes frescos e molhos da casa, direto na sua mesa ou porta.</p></div></div>
+    </div>
   </div>
 </section>
 
-<section>
-  <div class="promo">
-    <div class="kicker">Fique por dentro</div>
-    <h2>A Brasa também está no Instagram!</h2>
-    <p>Acompanhe as novidades, os lançamentos e as criações da Brasa 77.</p>
-    <p>Adicione aqui o link oficial do Instagram da hamburgueria.</p>
+<!-- AVALIAÇÕES -->
+<section id="avaliacoes">
+  <div class="wrap">
+    <div class="cab"><h2>Quem provou, volta</h2><p>Avaliações de clientes que já passaram pela brasa.</p></div>
+    <div class="avals">
+      <div class="aval"><div class="est">★★★★★</div><p>“O melhor hambúrguer de Aparecida. A carne vem no ponto e o bacon é crocante.”</p><span>Rafael M.</span></div>
+      <div class="aval"><div class="est">★★★★★</div><p>“Pedi o Triplo Burger e cheguei a pedir outro. Entrega rápida e tudo quentinho.”</p><span>Camila S.</span></div>
+      <div class="aval"><div class="est">★★★★★</div><p>“Atendimento excelente e a batata é viciante. Já virou hábito de fim de semana.”</p><span>Lucas P.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- OFERTA -->
+<section class="oferta" id="oferta">
+  <div class="wrap">
+    <div>
+      <h2>Combo 77<br>na brasa</h2>
+      <p>Burger + batata + refri por um preço que cabe no bolso. Válido de terça a quinta.</p>
+      <div class="cupom">BRASA77</div>
+    </div>
+    <button class="btn" id="pedirOferta">Pedir agora →</button>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="contato" id="contato">
+  <div class="wrap">
+    <div>
+      <h2>Vem pra brasa</h2>
+      <div class="info">
+        <div><b>Endereço</b>Goiânia – GO</div>
+        <div><b>Horário</b>Terça a domingo, das 18h às 23h</div>
+        <div><b>Instagram</b>@brasaburger7.7</div>
+      </div>
+    </div>
+    <div class="zap">
+      <h3>Peça pelo WhatsApp</h3>
+      <p>Monte seu pedido no cardápio e envie direto para a gente. Rápido e sem complicação.</p>
+      <a class="btn btn-brasa" id="zapLink" href="https://wa.me/5562900000000" target="_blank" rel="noopener">Chamar no WhatsApp →</a>
+    </div>
   </div>
 </section>
 </main>
 
-<footer>
-  <div class="logo" style="color:white">BRASA <span style="color:#ffb18a">77</span></div>
-  <p>Sabores que incendeiam.</p>
-  <p>Cardápio demonstrativo. © <span id="year"></span> Brasa 77.</p>
-  <p>Este site é um projeto demonstrativo. Os pedidos e pagamentos não são enviados por ele.</p>
-</footer>
+<footer><div class="wrap"><span>© <span id="ano"></span> Brasa 77 — Hamburgueria artesanal</span><span>Seu desejo. Nossa brasa.</span></div></footer>
 
-<button id="cart" onclick="openCart()">🛒 Carrinho (<span id="cart-count">0</span>)</button>
-
-<div id="cart-panel">
-  <div class="cart-box">
-    <h2>Seu carrinho</h2>
-    <div id="cart-items">Seu carrinho está vazio.</div>
-    <h3>Total: <span id="cart-total">R$ 0,00</span></h3>
-    <p>Este carrinho é apenas demonstrativo. Não realiza pedidos ou pagamentos.</p>
-    <button onclick="closeCart()">Continuar navegando</button>
-    <button onclick="clearCart()" style="background:#555">Limpar carrinho</button>
-  </div>
-</div>
+<!-- CARRINHO -->
+<div class="fundo" id="fundo"></div>
+<aside class="painel" id="painel" aria-label="Seu pedido">
+  <header><h3>Seu pedido</h3><button id="fechar" aria-label="Fechar" style="font-size:1.6rem;color:#fff">✕</button></header>
+  <div class="lista" id="lista"></div>
+  <div class="total"><span>Total</span><span id="total">R$ 0,00</span></div>
+  <a class="btn btn-brasa" id="enviar" href="#" target="_blank" rel="noopener" style="justify-content:center">Enviar pelo WhatsApp</a>
+</aside>
 
 <script>
-const products=[
-{cat:"entradas",name:"Esfirra + Cebola Empanada",desc:"Uma combinação deliciosa para compartilhar.",price:24.99,icon:"🧅"},
-{cat:"entradas",name:"Batata com Cheddar e Bacon",desc:"Porção de batata frita com cheddar e bacon.",price:24.99,icon:"🍟"},
-{cat:"entradas",name:"Porção de Picanha",desc:"Picanha servida como entrada.",price:35,icon:"🥩"},
-{cat:"entradas",name:"Bolinha de Costela",desc:"Petisco saboroso de costela.",price:24.99,icon:"🍖"},
-{cat:"entradas",name:"10 Mini Pastéis",desc:"Dez mini pastéis para compartilhar.",price:19.99,icon:"🥟"},
+/* ===== CONFIGURE AQUI ===== */
+const WHATSAPP = "5562900000000"; // DDI + DDD + número, sem espaços
 
-{cat:"hamburgueres",name:"Triplo Burger",desc:"2 carnes, 4 fatias de cheddar, 5 fatias de bacon, pão grelhado, alface e tomate.",price:38.90,icon:"🍔"},
-{cat:"hamburgueres",name:"Interestelar",desc:"Picanha, bacon, cheddar triplo, barbecue, molho verde, batata palha, costela e lombo suíno.",price:49.90,icon:"🍔"},
-{cat:"hamburgueres",name:"Booyah Burger",desc:"Pão grande, 2 carnes, cheddar, muçarela, ovos, bacon, calabresa, barbecue e presunto.",price:39.90,icon:"🍔"},
-{cat:"hamburgueres",name:"JL",desc:"Brioche, molho verde, alface, duas carnes, queijos, presunto, bacon, pepperoni, cebola empanada, picles e molho especial.",price:42.90,icon:"🍔"},
-{cat:"hamburgueres",name:"Potterhead",desc:"Hambúrguer artesanal, alface, tomate, salsicha, bacon, batata e molho especial.",price:39.99,icon:"🍔"},
-{cat:"hamburgueres",name:"Quarteto Queijos",desc:"Quatro queijos, cheddar, bacon, ovo, alface, tomate e duas carnes.",price:44.99,icon:"🍔"},
-
-{cat:"bebidas",name:"Magic Pop Redberry",desc:"Refrigerante sabor redberry.",price:8.99,icon:"🥤"},
-{cat:"bebidas",name:"Magic Pop Golden Fizz",desc:"Refrigerante sabor golden fizz.",price:8.99,icon:"🥤"},
-{cat:"bebidas",name:"Magic Pop Lemon Crush",desc:"Refrigerante sabor limão.",price:8.99,icon:"🥤"},
-{cat:"bebidas",name:"Magic Pop Cola",desc:"Refrigerante sabor cola.",price:8.99,icon:"🥤"},
-{cat:"bebidas",name:"Magic Pop Lime Pop",desc:"Refrigerante sabor lime.",price:8.99,icon:"🥤"},
-{cat:"bebidas",name:"Magic Pop Tropical Rush",desc:"Refrigerante sabor tropical.",price:8.99,icon:"🥤"},
-{cat:"bebidas",name:"Magic Pop Orange Sparky",desc:"Refrigerante sabor laranja.",price:8.99,icon:"🥤"},
-{cat:"bebidas",name:"Magic Pop Tropy Pop",desc:"Refrigerante sabor tropical.",price:8.99,icon:"🥤"},
-{cat:"bebidas",name:"BRASA 77 ENERGY",desc:"Energético da casa.",price:14.99,icon:"⚡"},
-
-{cat:"drinks",name:"Pink Brasa",desc:"Morango, limão, água com gás, gelo e calda de morango.",price:12.99,icon:"🍓"},
-{cat:"drinks",name:"Purple Berry",desc:"Uva, morango, frutas vermelhas e gelo.",price:13.99,icon:"🫐"},
-{cat:"drinks",name:"Jhen Peach",desc:"Pêssego, morango, limão, água de coco e gelo.",price:13.99,icon:"🍑"},
-{cat:"drinks",name:"Mar Profundo",desc:"Blueberry ou amora, água com gás, limão e gelo.",price:14.99,icon:"🌊"},
-{cat:"drinks",name:"Sunset Berry",desc:"Morango, uva, laranja e água com gás opcional.",price:13.99,icon:"🍇"},
-
-{cat:"sobremesas",name:"Explosão de Chocolate",desc:"Brownie, brigadeiro, calda de chocolate e sorvete.",price:14.90,icon:"🍫"},
-{cat:"sobremesas",name:"Tentação de Morango",desc:"Creme de morango, morangos, chocolate e chantilly.",price:15.90,icon:"🍓"},
-{cat:"sobremesas",name:"Pedaço do Céu",desc:"Bolo de chocolate, brigadeiro, morangos e sorvete.",price:14.90,icon:"🍰"},
-{cat:"sobremesas",name:"Doce Paixão",desc:"Mousse de maracujá, chocolate branco e calda.",price:13.90,icon:"🍮"},
-
-{cat:"cremes",name:"Creme de Morango",desc:"Creme sabor morango.",price:14.99,icon:"🍓"},
-{cat:"cremes",name:"Creme de Café",desc:"Creme sabor café.",price:14.99,icon:"☕"},
-{cat:"cremes",name:"Creme de Chocolate",desc:"Creme sabor chocolate.",price:14.99,icon:"🍫"},
-{cat:"cremes",name:"Creme de Maracujá",desc:"Creme sabor maracujá.",price:14.99,icon:"🍈"}
-];
-
-const cart={};
-const money=n=>n.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
-
-function renderProducts(){
-["entradas","hamburgueres","bebidas","drinks","sobremesas","cremes"].forEach(cat=>{
-const grid=document.getElementById("grid-"+cat);
-grid.innerHTML=products.filter(p=>p.cat===cat).map((p,i)=>`
-<article class="product">
-<div class="product-art">${p.icon}</div>
-<div class="product-body">
-<h3>${p.name}</h3>
-<p>${p.desc}</p>
-<div class="price">${money(p.price)}</div>
-<button onclick="addToCart(${products.indexOf(p)})">+ Adicionar</button>
-</div>
-</article>`).join("");
-});
-}
-
-function addToCart(i){cart[i]=(cart[i]||0)+1;renderCart()}
-function changeQty(i,d){cart[i]=(cart[i]||0)+d;if(cart[i]<=0)delete cart[i];renderCart()}
-function clearCart(){Object.keys(cart).forEach(k=>delete cart[k]);renderCart()}
-function renderCart(){
-const entries=Object.entries(cart);
-document.getElementById("cart-count").textContent=entries.reduce((s,[i,q])=>s+q,0);
-let total=0;
-document.getElementById("cart-items").innerHTML=entries.length?entries.map(([i,q])=>{
-const p=products[Number(i)];total+=p.price*q;
-return `<div class="cart-row"><strong>${p.name}</strong><br>${money(p.price)}<br><button onclick="changeQty(${i},-1)">−</button>${q}<button onclick="changeQty(${i},1)">+</button></div>`;
-}).join(""):"Seu carrinho está vazio.";
-document.getElementById("cart-total").textContent=money(total);
-}
-function openCart(){document.getElementById("cart-panel").classList.add("open")}
-function closeCart(){document.getElementById("cart-panel").classList.remove("open")}
-document.getElementById("year").textContent=new Date().getFullYear();
-renderProducts();
-renderCart();
-</script>
-</body>
-</html>
+const MENU = [
+  {id:1,cat:"Hambúrgueres",nome:"Triplo Burger",desc:"2 fatias de carne, 4 fatias de cheddar, 5 fatias de bacon, pão grelhado, alface e tomate.",preco:38.9,emoji:"🍔",tag:"Mais pedido"},
+  {id:2,cat:"Hambúrgueres",nome:"Interestelar",desc:"Picanha, bacon, cheddar triplo, barbecue, molho verde, batata palha, costela desossada e lombo suíno.",preco:49.9,emoji:"🚀"},
+  {id:3,cat:"Hambúrgueres",nome:"Booyah Burger",desc:"Pão grande, 2 carnes, cheddar, muçarela, 2 ovos fritos, bacon, calabresa, molho barbecue e presunto.",preco:39.9,emoji:"🍔"},
+  {id:4,cat:"Hambúrgueres",nome:"JL",desc:"Pão brioche selado na manteiga, molho verde, alface, duas carnes, cheddar, muçarela, presunto, bacon, pepperoni, dois anéis de cebola empanados, pickles e Last Sauce (molho especial da casa).
